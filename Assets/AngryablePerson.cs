@@ -25,9 +25,10 @@ public class AngryablePerson : MonoBehaviour {
     }
     public void TriggerNoAngry() {
         animator.SetTrigger("noAngryTrigger");
+        angryableFace.SetAngry(false);
     }
     public void TriggerAngry() {
-        angryableFace.TriggerAngry();
+        angryableFace.SetAngry(true);
     }
     public void TriggerRun() {
         animator.SetTrigger("runTrigger");
