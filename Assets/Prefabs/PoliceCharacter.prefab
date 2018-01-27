@@ -344,6 +344,7 @@ MonoBehaviour:
   View: {fileID: 0}
   AngryPerson: {fileID: 114426523238224782}
   hitCircle: {fileID: 114713915551904998}
+  Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   SearchRotate: 0
   RotateSpeed: 40
 --- !u!212 &212391047492403638

@@ -12,8 +12,13 @@ public class CharacterController : MonoBehaviour {
 	public AngryablePerson AngryPerson;
 	public HitCircle hitCircle;
 
+	public GameObject Origin;
+
+
 	// hit
 	private float HitRange;
+	private float Wudi;
+	private float Stop=0;
 
 	// rotate
 	public int SearchRotate;
@@ -44,6 +49,8 @@ public class CharacterController : MonoBehaviour {
 	{
 		State = States.Normal;
 		SearchRotate = 0;
+		Origin = Instantiate (Origin);
+		Origin.transform.position = transform.position;
 
 		Move = GetComponent<MoveController> ();
 		HitRange = GetComponent<CircleCollider2D> ().radius * 2 + 0.1f;
@@ -54,6 +61,14 @@ public class CharacterController : MonoBehaviour {
 	{
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (View.transform.eulerAngles.z);
+		if (Stop > 0.1f) {
+			Stop -= Time.deltaTime;
+			if (Stop < 0.1f) {
+				Debug.Log ("Stop over");
+			}
+			return;
+		}
+
 
 		// Search !
 		if (SearchRotate != 0) {
@@ -82,22 +97,31 @@ public class CharacterController : MonoBehaviour {
 			Move.UpdateMove();
 		}
 
+
+		if (Wudi >= 0.1f)
+			Wudi -= Time.deltaTime;
 	}
 
 	public void BecomeAngry(GameObject target)
 	{
 //		Debug.Log ("BecomeAngry");
+		AngryPerson.TriggerAngry();
 		State = States.Angry;
 		SearchRotate = 0;
 		Move.SetTarget (target);
 		TargetCtrl = target.GetComponent<CharacterController> ();
 	}
 
+	public void SetStop(float time)
+	{
+		Stop = time;
+	}
+
 	public void Hit(Vector3 otherVec)
 	{
 //		Debug.Log ("Hit" + this.gameObject.name);
 
-		if(State == States.Normal) // some condition
+		if(State == States.Normal && Wudi < 0.1f) // some condition
 		{
 			State = States.WillAngry;
 
@@ -112,7 +136,7 @@ public class CharacterController : MonoBehaviour {
 			while (delta < -180)
 				delta += 360;
 
-			Debug.Log (deg.ToString() + ',' + delta.ToString() );
+//			Debug.Log (deg.ToString() + ',' + delta.ToString() );
 
 
 			if (delta > 0)
@@ -121,6 +145,26 @@ public class CharacterController : MonoBehaviour {
 				SearchRotate = -1;
 
 		}
+	}
+
+	void Return()
+	{
+		AngryPerson.TriggerNoAngry();
+		Debug.Log ("Return");
+		State = States.Normal;
+		hitCircle.gameObject.SetActive(false);
+		Move.SetTarget (Origin);
+		Wudi = 1f;
+	}
+
+	public void OnTriggerStay2D (Collider2D other)
+	{
+		// return to normal
+		if (State ==States.Fight && other.gameObject.tag == "ViewArea" && other.GetComponent<PoliceView> () != null
+			&& other.GetComponent<CharacterController>().State == States.Normal) {
+			Return ();
+		}
+			
 	}
 
 	public void AdaptFace(float deg)
