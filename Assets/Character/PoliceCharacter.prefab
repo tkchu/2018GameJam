@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 60960756700146542}
   - component: {fileID: 114195468879813260}
   - component: {fileID: 212509095585465788}
+  - component: {fileID: 114682516535063456}
   m_Layer: 0
   m_Name: ViewArea
   m_TagString: ViewArea
@@ -137,7 +138,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504476864426012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.2, y: -4.45, z: 0}
+=======
+  m_LocalPosition: {x: -5.64, y: -1.78, z: 0}
+>>>>>>> f7d2a0630e8c16e89a4b7fe4b3c496cb6d14908d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4208943124420886}
@@ -275,8 +280,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 10.654358, y: 4.1403494}
-      - {x: 10.654358, y: -4.01257}
+      - {x: 5.418871, y: 1.9695401}
+      - {x: 5.418872, y: -2.160996}
 --- !u!95 &95628092406021040
 Animator:
   serializedVersion: 3
@@ -382,6 +387,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angryableFace: {fileID: 114605022110745558}
   hitIcon: {fileID: 1992967742062756}
+--- !u!114 &114682516535063456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924540273941178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e293174864b08ee4689698ca860fe2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorIn: {r: 1, g: 0.44705883, b: 0.20392157, a: 1}
+  colorOut: {r: 0.37254903, g: 1, b: 0.43137255, a: 1}
+  spriteRenderer: {fileID: 212509095585465788}
 --- !u!212 &212217008218715210
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -461,7 +480,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 020d6039a1b202d42af16fc639877119, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.37254903, g: 1, b: 0.43137258, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
