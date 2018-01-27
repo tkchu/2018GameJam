@@ -24,7 +24,7 @@ public class MoveController : MonoBehaviour {
 
 		if (target == null)
 			return;
-
+//		Debug.Log (target.transform.position);
 		Vector3 direction = target.transform.position - transform.position;
 		float dist = direction.magnitude;
 

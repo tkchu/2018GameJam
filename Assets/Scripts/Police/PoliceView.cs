@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class PoliceView : ViewArea {
 
-	public GameController Game;
-
 	override public void OnTriggerStay2D (Collider2D other)
 	{
 		if (character.State == States.WillAngry && other.tag == "Player")
-			Game.GameOver ();
+			GameController.GameOver ();
 
 		if (other.tag == "Player" && other.GetComponent<PlayerControl>().isFighting)
-			Game.GameOver ();
+			GameController.GameOver ();
 
 		if (other.tag == "Character" && other.GetComponent<CharacterController> ().State == States.Fight &&
 			character.State == States.Normal) 
 		{
 			character.SetStop (2);
+			character.AngryPerson.TriggerWhistle ();
 			Debug.Log ("Stop!!!");
+
+			other.GetComponent<CharacterController>().Return ();
 		}
 
 		base.OnTriggerStay2D (other);

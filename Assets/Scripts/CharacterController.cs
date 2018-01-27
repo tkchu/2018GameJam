@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour {
 	public States State;
 	private MoveController Move; 
 	[HideInInspector] public ViewArea View;
-	private CharacterController TargetCtrl;
+	private Transform TargetTransform;
 	public AngryablePerson AngryPerson;
 	public HitCircle hitCircle;
 
@@ -61,6 +61,9 @@ public class CharacterController : MonoBehaviour {
 	{
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (View.transform.eulerAngles.z);
+		if (Wudi >= 0.1f)
+			Wudi -= Time.deltaTime;
+		
 		if (Stop > 0.1f) {
 			Stop -= Time.deltaTime;
 			if (Stop < 0.1f) {
@@ -80,7 +83,8 @@ public class CharacterController : MonoBehaviour {
 		// Hit others
 		if (State == States.Angry) 
 		{
-			float dist = (TargetCtrl.transform.position - transform.position).magnitude;
+
+			float dist = (TargetTransform.position - transform.position).magnitude;
 //			Debug.Log (dist);
 			if (dist < HitRange)
 			{
@@ -96,10 +100,7 @@ public class CharacterController : MonoBehaviour {
 			AngryPerson.TriggerRun ();
 			Move.UpdateMove();
 		}
-
-
-		if (Wudi >= 0.1f)
-			Wudi -= Time.deltaTime;
+			
 	}
 
 	public void BecomeAngry(GameObject target)
@@ -109,7 +110,7 @@ public class CharacterController : MonoBehaviour {
 		State = States.Angry;
 		SearchRotate = 0;
 		Move.SetTarget (target);
-		TargetCtrl = target.GetComponent<CharacterController> ();
+		TargetTransform = target.GetComponent<Transform> ();
 	}
 
 	public void SetStop(float time)
@@ -147,7 +148,7 @@ public class CharacterController : MonoBehaviour {
 		}
 	}
 
-	void Return()
+	public void Return()
 	{
 		AngryPerson.TriggerNoAngry();
 		Debug.Log ("Return");
@@ -156,16 +157,7 @@ public class CharacterController : MonoBehaviour {
 		Move.SetTarget (Origin);
 		Wudi = 1f;
 	}
-
-	public void OnTriggerStay2D (Collider2D other)
-	{
-		// return to normal
-		if (State ==States.Fight && other.gameObject.tag == "ViewArea" && other.GetComponent<PoliceView> () != null
-			&& other.GetComponent<CharacterController>().State == States.Normal) {
-			Return ();
-		}
-			
-	}
+		
 
 	public void AdaptFace(float deg)
 	{

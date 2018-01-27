@@ -26,11 +26,11 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void GameWin()
+	static public void GameWin()
 	{
 		Debug.Log ("Win");
 	}
-	public void GameOver()
+	static public void GameOver()
 	{
 		Debug.Log ("Game Over");
 	}
