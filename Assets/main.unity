@@ -248,6 +248,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   person: {fileID: 884327297}
+--- !u!1 &314961858 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1035069632400788, guid: 7d315a4fd3a22404cad12514b18fef11,
+    type: 2}
+  m_PrefabInternal: {fileID: 1683563851}
+--- !u!114 &314961862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 314961858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3b5b6eb8188d3439e9a77dd773eaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &461289032
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,8 +434,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 884327297}
-        m_MethodName: TriggerFight
+      - m_Target: {fileID: 314961862}
+        m_MethodName: TurnLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -750,16 +766,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 884327297}
-        m_MethodName: TriggerRun
-        m_Mode: 1
+      - m_Target: {fileID: 314961862}
+        m_MethodName: SetRunnig
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -934,6 +950,48 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1683563851
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709575033114184, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7d315a4fd3a22404cad12514b18fef11, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1847187204
 GameObject:
   m_ObjectHideFlags: 0
