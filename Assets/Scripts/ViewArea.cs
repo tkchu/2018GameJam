@@ -5,7 +5,7 @@ using UnityEngine;
 public class ViewArea : MonoBehaviour {
 
 	// Use this for initialization
-	private CharacterController character;
+	protected CharacterController character;
 
 	void Start()
 	{
@@ -17,7 +17,7 @@ public class ViewArea : MonoBehaviour {
 
 	}
 
-	void OnTriggerStay2D(Collider2D other)
+	virtual public void OnTriggerStay2D(Collider2D other)
 	{
 		if (character.State != States.WillAngry || other.tag != "Character")
 			return;

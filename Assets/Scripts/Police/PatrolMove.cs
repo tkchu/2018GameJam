@@ -6,17 +6,24 @@ public class PatrolMove : MoveController {
 
 	public GameObject[] Point;
 	private int Pos = 0;
+	private bool Patrol;
 
 	void Start()
 	{
 		base.Start ();
 		base.target = Point[Pos];
+		Patrol = true;
 	}
 
 
 	override public void UpdateMove()
 	{
-		if (GetDist () <= 2f) 
+		if (Patrol && Point[Pos] != base.target) 
+		{
+			Patrol = false;
+		}
+
+		if (Patrol && GetDist () <= 2f) 
 		{
 			Pos = (Pos + 1) % Point.Length;
 			base.SetTarget (Point[Pos]);	

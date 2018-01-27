@@ -22,7 +22,7 @@ public class CharacterController : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Awake () 
+	public void Awake () 
 	{
 		Init ();
 
@@ -30,17 +30,17 @@ public class CharacterController : MonoBehaviour {
 //		test();
 	}
 
-	void Start()
+	public void Start()
 	{
 		AdaptFace (View.transform.eulerAngles.z);
 	}
-	void test()
+	public void test()
 	{
 		State = States.WillAngry;
 		SearchRotate = 1;
 	}
 
-	void Init()
+	public void Init()
 	{
 		State = States.Normal;
 		SearchRotate = 0;
@@ -50,7 +50,7 @@ public class CharacterController : MonoBehaviour {
 		View = GetComponentInChildren<ViewArea> ();
 	}
 
-	void Update()
+	public void Update()
 	{
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (View.transform.eulerAngles.z);
