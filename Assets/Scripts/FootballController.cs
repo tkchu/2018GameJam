@@ -12,7 +12,6 @@ public class FootballController : CharacterController {
 		Vector3 direction = otherVec - transform.position;
 		NewTarget.transform.position = transform.position + direction.normalized * 20f;
 		Move.SetTarget (NewTarget);
-		Move.MoveSpeed *= 2f;
 
 
 		State = States.Fight;

@@ -18,7 +18,7 @@ public class PoliceView : ViewArea {
 		{
 			character.SetStop (2);
 			character.AngryPerson.TriggerWhistle ();
-			Debug.Log ("Stop!!!");
+//			Debug.Log ("Stop!!!");
 
 			other.GetComponent<CharacterController>().Return ();
 		}

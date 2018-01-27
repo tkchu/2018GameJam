@@ -140,8 +140,8 @@ Transform:
   m_LocalPosition: {x: 3.2, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4975496336599384}
   - {fileID: 4208943124420886}
+  - {fileID: 4975496336599384}
   - {fileID: 4445171030360512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4183416414612778}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4445171030360512
 Transform:
@@ -198,7 +198,7 @@ Transform:
   - {fileID: 4027978538455652}
   - {fileID: 4900318292839546}
   m_Father: {fileID: 4183416414612778}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50296873459593868
 Rigidbody2D:
@@ -317,6 +317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  ParentCtrl: {fileID: 114234770665677426}
+  View: {fileID: 114195468879813260}
   rgb: {fileID: 0}
   MoveSpeed: 1
   AtTarget: 0
@@ -346,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 0
-  View: {fileID: 0}
+  View: {fileID: 114195468879813260}
   AngryPerson: {fileID: 114612413590459550}
   hitCircle: {fileID: 114076912849907654}
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}

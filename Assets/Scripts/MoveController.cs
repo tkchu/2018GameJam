@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveController : MonoBehaviour {
 
 	public GameObject target;
-	private CharacterController ParentCtrl;
-	private ViewArea View;
+	public CharacterController ParentCtrl;
+	public ViewArea View;
 	[HideInInspector]
 	public Rigidbody2D rgb;
 
@@ -19,7 +19,6 @@ public class MoveController : MonoBehaviour {
 	public void Awake () {
 		rgb = GetComponent<Rigidbody2D> ();
 		ParentCtrl = GetComponent<CharacterController> ();
-		View = ParentCtrl.View;
 	}
 
 	virtual public void UpdateMove () {
@@ -42,7 +41,6 @@ public class MoveController : MonoBehaviour {
 		if (dist < SlowRange)
 			rgb.velocity = rgb.velocity.normalized * 0.3f;
 		
-
 		float deg = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 		float delta = deg - (View.transform.eulerAngles.z);
 

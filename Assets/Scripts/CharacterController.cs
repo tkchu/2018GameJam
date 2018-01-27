@@ -7,7 +7,7 @@ public class CharacterController : MonoBehaviour {
 
 	public States State;
 	protected MoveController Move; 
-	[HideInInspector] public ViewArea View;
+	public ViewArea View;
 	private Transform TargetTransform;
 	public AngryablePerson AngryPerson;
 	public HitCircle hitCircle;
@@ -57,7 +57,6 @@ public class CharacterController : MonoBehaviour {
 
 		Move = GetComponent<MoveController> ();
 		HitRange = GetComponent<CircleCollider2D> ().radius * 2 + 0.1f;
-		View = GetComponentInChildren<ViewArea> ();
 	}
 
 	public void Update()

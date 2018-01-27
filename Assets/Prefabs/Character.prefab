@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4932938769747054}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &4297457800248806
 Transform:
@@ -138,7 +138,7 @@ Transform:
   m_Children:
   - {fileID: 4863501872730324}
   m_Father: {fileID: 4932938769747054}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4863501872730324
 Transform:
@@ -163,8 +163,8 @@ Transform:
   m_LocalPosition: {x: 6.25, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4512302822095574}
   - {fileID: 4043603484075622}
+  - {fileID: 4512302822095574}
   - {fileID: 4297457800248806}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -343,6 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  ParentCtrl: {fileID: 114269716785372902}
+  View: {fileID: 114392674398938640}
   rgb: {fileID: 50598026563779574}
   MoveSpeed: 1
   AtTarget: 1
