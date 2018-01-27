@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour {
     PlayerMovement playerMovement;
     Rigidbody2D rigidbody2D;
+    public HitCircle hitCircle;
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
     private void Update() {
+        //是否在跑动
         float right = 0;
         float up = 0;
         if (Input.GetKey(KeyCode.A)) {
@@ -25,6 +27,7 @@ public class PlayerControl : MonoBehaviour {
         playerMovement.SetRunnig(right != 0 || up != 0);
         rigidbody2D.velocity = new Vector2(right, up);
 
+        //进行移动
         float facingRight = 0;
         float facingUp = 0;
         if (Input.GetKeyDown(KeyCode.A)) {
@@ -40,5 +43,8 @@ public class PlayerControl : MonoBehaviour {
         if(facingRight != 0 || facingUp != 0) {
             playerMovement.SetFacing(facingRight, facingUp);
         }
+
+        //进行攻击
+        hitCircle.enabled = Input.GetKey(KeyCode.Space);
     }
 }
