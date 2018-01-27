@@ -89,13 +89,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919106627647024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4932938769747054}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4512302822095574
 Transform:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060705675895100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.62, y: -2.69, z: 0}
+  m_LocalPosition: {x: -3.4, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512302822095574}
@@ -197,12 +197,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.8963511, y: 3.962566}
-      - {x: 1.2381866, y: 4.443623}
-      - {x: 0.079670906, y: 4.679117}
-      - {x: -0.91491413, y: 4.5052752}
-      - {x: -1.7399229, y: 3.979779}
-      - {x: -0.006642969, y: 0.05215696}
+    - - {x: 0, y: 0}
+      - {x: 4, y: 2}
+      - {x: 4, y: -2}
 --- !u!95 &95348608717028338
 Animator:
   serializedVersion: 3
@@ -246,7 +243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
-  SearchRotate: 0
+  View: {fileID: 0}
+  AngryPerson: {fileID: 114571262998110142}
+  SearchRotate: 1
+  RotateSpeed: 40
 --- !u!114 &114392674398938640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  rgb: {fileID: 0}
   AtTarget: 0
 --- !u!212 &212472658546269718
 SpriteRenderer:

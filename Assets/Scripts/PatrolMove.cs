@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RandomMove : MoveController {
 
-	// Use this for initialization
-	
-	// Update is called once per frame
-	void GetTarget () {
-		
+	public GameObject PosA, PosB;
+
+
+
+	void Update()
+	{
+		base.SetTarget (PosA);
 	}
 }

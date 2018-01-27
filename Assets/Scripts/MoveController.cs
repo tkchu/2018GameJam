@@ -5,14 +5,18 @@ using UnityEngine;
 public class MoveController : MonoBehaviour {
 
 	public GameObject target;
-
-	private Rigidbody2D rgb;
+	private CharacterController ParentCtrl;
+	private ViewArea View;
+	[HideInInspector]
+	public Rigidbody2D rgb;
 	private float MoveSpeed = 1f;
 
 	public bool AtTarget;
 
 	void Start () {
 		rgb = GetComponent<Rigidbody2D> ();
+		ParentCtrl = GetComponent<CharacterController> ();
+		View = ParentCtrl.View;
 	}
 
 	void LateUpdate () {
@@ -31,6 +35,27 @@ public class MoveController : MonoBehaviour {
 		rgb.AddForce(direction * MoveSpeed);
 		if (rgb.velocity.magnitude >= MoveSpeed)
 			rgb.velocity = rgb.velocity.normalized * MoveSpeed;
+
+		float deg = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
+		float delta = deg - (View.transform.eulerAngles.z);
+
+		while (delta > 180f)
+			delta -= 360f;
+		while (delta < -180f)
+			delta += 360f;
+
+
+//		if (this.gameObject.name == "Character")
+//			Debug.Log (deg.ToString() + "," + (View.transform.eulerAngles.z).ToString() + "," + delta.ToString() );
+		
+		if (Mathf.Abs (delta) > 10f) 
+		{
+			delta /= Mathf.Abs(delta);
+
+			View.transform.Rotate (Vector3.forward * ParentCtrl.RotateSpeed * Time.deltaTime * delta);
+
+			ParentCtrl.AdaptFace (deg);
+		}
 
 	}
 
