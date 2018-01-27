@@ -44,3 +44,6 @@ TagManager:
   - name: person
     uniqueID: 3078897103
     locked: 0
+  - name: facing
+    uniqueID: 3001465857
+    locked: 0

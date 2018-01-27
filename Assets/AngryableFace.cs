@@ -2,42 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class AngryablePerson : MonoBehaviour {
-    Animator animator;
+public class AngryableFace : MonoBehaviour {
+    public Sprite down;
+    public Sprite up;
+    public Sprite side;
     SpriteRenderer spriteRenderer;
-    public AngryableFace angryableFace;
 
     private void Awake() {
-        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    public void TriggerRun() {
-        animator.SetTrigger("runTrigger");
-    }
-    public void TriggerFight() {
-        animator.SetTrigger("fightTrigger");
     }
 
     public void SetFacing(Facing facing) {
         switch (facing) {
             case Facing.down:
-                animator.SetInteger("facing", 0);
+                spriteRenderer.sprite = down;
                 break;
             case Facing.up:
-                animator.SetInteger("facing", 1);
+                spriteRenderer.sprite = up;
                 break;
             case Facing.left:
-                animator.SetInteger("facing", 2);
+                spriteRenderer.sprite = side;
                 spriteRenderer.flipX = true;
                 break;
             case Facing.right:
-                animator.SetInteger("facing", 2);
+                spriteRenderer.sprite = side;
                 spriteRenderer.flipX = false;
                 break;
         }
-        angryableFace.SetFacing(facing);
     }
 }
