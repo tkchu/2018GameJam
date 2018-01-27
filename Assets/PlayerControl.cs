@@ -44,11 +44,11 @@ public class PlayerControl : MonoBehaviour {
         }
         if(facingRight != 0 || facingUp != 0) {
             playerMovement.SetFacing(facingRight, facingUp);
-//            Debug.Log(new Vector2(facingRight, facingUp));
         }
 
         //进行攻击
         isFighting = Input.GetKey(KeyCode.Space);
+        playerMovement.SetFight(isFighting);
         hitCircle.gameObject.SetActive(isFighting);
     }
 }
