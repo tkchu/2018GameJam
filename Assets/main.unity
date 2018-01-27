@@ -190,8 +190,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 475525372}
-        m_MethodName: TriggerHit
+      - m_Target: {fileID: 884327297}
+        m_MethodName: TriggerFight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -248,12 +248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   person: {fileID: 884327297}
---- !u!114 &314961862 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114655245736453090, guid: 7d315a4fd3a22404cad12514b18fef11,
-    type: 2}
-  m_PrefabInternal: {fileID: 1683563851}
-  m_Script: {fileID: 11500000, guid: ca3b5b6eb8188d3439e9a77dd773eaaa, type: 3}
 --- !u!1 &461289032
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,12 +329,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475525372 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114868864807056032, guid: a1d047e4c24f1614aaab7b429922891f,
-    type: 2}
-  m_PrefabInternal: {fileID: 540535438}
-  m_Script: {fileID: 11500000, guid: 9975446c3fda99542bd96f7b8413290c, type: 3}
 --- !u!1 &538766337
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,8 +418,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 314961862}
-        m_MethodName: TurnLeft
+      - m_Target: {fileID: 884327297}
+        m_MethodName: TriggerFight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -772,9 +760,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 314961862}
-        m_MethodName: SetRunnig
-        m_Mode: 6
+      - m_Target: {fileID: 884327297}
+        m_MethodName: TriggerRun
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -861,8 +849,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 373d125e33f56884792139bb2b09fafe,
-        type: 2}
+      objectReference: {fileID: 9100000, guid: cd6a8eca1e65f2842b655357e5e0bbce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5671c0cf4d08fe1498eb40ff722835b7, type: 2}
   m_IsPrefabParent: 0
