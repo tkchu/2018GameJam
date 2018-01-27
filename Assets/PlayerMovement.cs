@@ -37,4 +37,7 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetFloat("MoveRight", right);
         animator.SetFloat("MoveUp", up);
     }
+    public void SetFight(bool isFighting) {
+        animator.SetBool("fight", isFighting);
+    }
 }
