@@ -6,5 +6,6 @@ public enum States
 {
 	Normal,
 	WillAngry,
-	Angry
+	Angry,
+	Fight
 }

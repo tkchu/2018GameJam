@@ -10,10 +10,10 @@ public class CharacterController : MonoBehaviour {
 	[HideInInspector] public ViewArea View;
 	private CharacterController TargetCtrl;
 	public AngryablePerson AngryPerson;
+	public HitCircle hitCircle;
 
 	// hit
 	private float HitRange;
-	private bool HitOver;
 
 	// rotate
 	public int SearchRotate;
@@ -63,15 +63,14 @@ public class CharacterController : MonoBehaviour {
 		} 
 
 		// Hit others
-		if (TargetCtrl != null && HitOver == false) 
+		if (State == States.Angry) 
 		{
 			float dist = (TargetCtrl.transform.position - transform.position).magnitude;
 //			Debug.Log (dist);
 			if (dist < HitRange)
 			{
-				HitOver = true;
-				TargetCtrl.Hit (this.transform.position);
-//				Debug.Log ("Fight");
+				State = States.Fight;
+				hitCircle.gameObject.SetActive(true);
 				AngryPerson.TriggerFight ();
 			}
 		}
@@ -82,7 +81,6 @@ public class CharacterController : MonoBehaviour {
 			AngryPerson.TriggerRun ();
 			Move.UpdateMove();
 		}
-
 
 	}
 

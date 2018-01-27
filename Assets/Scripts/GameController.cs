@@ -16,16 +16,20 @@ public class GameController : MonoBehaviour {
 
 		int newScore = 0;
 		foreach (GameObject enemy in Enemies) {
-			if (enemy.GetComponent<CharacterController> ().State == States.Angry)
+			if (enemy.GetComponent<CharacterController> ().State != States.Normal)
 				newScore++;
 		}
 
 		Score = newScore;
 		if (Score == Enemies.Length) {
-			Debug.Log ("GameOver");
+			GameWin ();
 		}
 	}
 
+	public void GameWin()
+	{
+		Debug.Log ("Win");
+	}
 	public void GameOver()
 	{
 		Debug.Log ("Game Over");
