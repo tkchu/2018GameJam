@@ -15,6 +15,7 @@ public class AngryablePerson : MonoBehaviour {
     }
 
     public void TriggerRun() {
+        angryableFace.TriggerAngry();
         animator.SetTrigger("runTrigger");
     }
     public void TriggerFight() {

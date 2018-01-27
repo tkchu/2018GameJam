@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TestButton : MonoBehaviour {
     public AngryablePerson person;
-    public void SetFacing(int fac) {
+    int fac = 0;
+    public void SetFacing() {
         if(fac==0)
             person.SetFacing(Facing.down);
 
@@ -16,5 +17,9 @@ public class TestButton : MonoBehaviour {
 
         if (fac == 3)
             person.SetFacing(Facing.right);
+        fac += 1;
+        if(fac >= 4) {
+            fac = 0;
+        }
     }
 }

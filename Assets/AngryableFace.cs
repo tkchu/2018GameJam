@@ -10,6 +10,11 @@ public class AngryableFace : MonoBehaviour {
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
+    }
+
+    public void TriggerAngry() {
+        spriteRenderer.enabled = true;
     }
 
     public void SetFacing(Facing facing) {
