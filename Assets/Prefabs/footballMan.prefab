@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4011056120368508}
-  - component: {fileID: 95963067110245678}
   - component: {fileID: 212359712447818364}
   - component: {fileID: 114848183857612148}
+  - component: {fileID: 95266482504563704}
   m_Layer: 0
   m_Name: footballMan
   m_TagString: Untagged
@@ -73,7 +73,7 @@ Transform:
   m_Father: {fileID: 4011056120368508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95963067110245678
+--- !u!95 &95266482504563704
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -82,7 +82,7 @@ Animator:
   m_GameObject: {fileID: 1174087615440966}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd6a8eca1e65f2842b655357e5e0bbce, type: 2}
+  m_Controller: {fileID: 9100000, guid: 096e9cb0c0b75ff4393f1aa352d099ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_SortingLayerID: -1293501439
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1519afd7aa23e0a45b51654281fce45e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bf299099b2997b448ddc1935cbe1f5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -13,7 +13,9 @@ public class AngryablePerson : MonoBehaviour {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    public void TriggerNoAngry() {
+        animator.SetTrigger("noAngryTrigger");
+    }
     public void TriggerAngry() {
         angryableFace.TriggerAngry();
     }
