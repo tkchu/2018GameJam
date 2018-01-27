@@ -13,8 +13,8 @@ public class AngryableFace : MonoBehaviour {
         spriteRenderer.enabled = false;
     }
 
-    public void TriggerAngry() {
-        spriteRenderer.enabled = true;
+    public void SetAngry(bool angry) {
+        spriteRenderer.enabled = angry;
     }
 
     public void SetFacing(Facing facing) {
