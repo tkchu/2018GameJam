@@ -19,7 +19,7 @@ public class ViewArea : MonoBehaviour {
 
 	virtual public void OnTriggerStay2D(Collider2D other)
 	{
-		if (character.State != States.WillAngry || other.tag != "Character")
+		if (character.State != States.WillAngry || (other.tag != "Character" && other.tag != "Player"))
 			return;
 
 		Vector3 direction = (other.transform.position - transform.position).normalized;
