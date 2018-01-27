@@ -109,7 +109,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.9849627
 --- !u!95 &95967353306963266
 Animator:
   serializedVersion: 3
@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitCircle: {fileID: 114665794059454912}
+  isFighting: 0
+  speed: 2
 --- !u!114 &114655245736453090
 MonoBehaviour:
   m_ObjectHideFlags: 1
