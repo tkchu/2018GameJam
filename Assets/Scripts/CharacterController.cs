@@ -118,7 +118,7 @@ public class CharacterController : MonoBehaviour {
 		Stop = time;
 	}
 
-	public void Hit(Vector3 otherVec)
+	virtual public void Hit(Vector3 otherVec)
 	{
 //		Debug.Log ("Hit" + this.gameObject.name);
 
@@ -151,7 +151,7 @@ public class CharacterController : MonoBehaviour {
 	public void Return()
 	{
 		AngryPerson.TriggerNoAngry();
-		Debug.Log ("Return");
+//		Debug.Log ("Return");
 		State = States.Normal;
 		hitCircle.gameObject.SetActive(false);
 		Move.SetTarget (Origin);

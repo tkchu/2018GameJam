@@ -10,7 +10,7 @@ public class MoveController : MonoBehaviour {
 	[HideInInspector]
 	public Rigidbody2D rgb;
 
-	private float MoveSpeed = 1f;
+	public float MoveSpeed = 2f;
 
 	public bool AtTarget;
 

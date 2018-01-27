@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060705675895100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.58, y: 2.44, z: 0}
+  m_LocalPosition: {x: 6.25, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512302822095574}
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angryableFace: {fileID: 114117079873890578}
+  hitIcon: {fileID: 0}
 --- !u!114 &114595704691528296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rgb: {fileID: 50598026563779574}
+  MoveSpeed: 1
   AtTarget: 1
 --- !u!212 &212472658546269718
 SpriteRenderer:
