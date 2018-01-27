@@ -8,9 +8,9 @@ public class PatrolMove : MoveController {
 	private int Pos = 0;
 	private bool Patrol;
 
-	void Start()
+	void Awake()
 	{
-		base.Start ();
+		base.Awake ();
 		base.target = Point[Pos];
 		Patrol = true;
 	}
@@ -23,7 +23,7 @@ public class PatrolMove : MoveController {
 			Patrol = false;
 		}
 
-		if (Patrol && GetDist () <= 2f) 
+		if (Patrol && GetDist () <= 0.5f) 
 		{
 			Pos = (Pos + 1) % Point.Length;
 			base.SetTarget (Point[Pos]);	

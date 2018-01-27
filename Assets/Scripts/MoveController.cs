@@ -13,14 +13,17 @@ public class MoveController : MonoBehaviour {
 	public float MoveSpeed = 2f;
 
 	public bool AtTarget;
+	private float SlowRange = 0.8f;
+	private float StopRange = 0.2f;
 
-	public void Start () {
+	public void Awake () {
 		rgb = GetComponent<Rigidbody2D> ();
 		ParentCtrl = GetComponent<CharacterController> ();
 		View = ParentCtrl.View;
 	}
 
 	virtual public void UpdateMove () {
+
 
 		if (target == null)
 			return;
@@ -30,9 +33,15 @@ public class MoveController : MonoBehaviour {
 
 		direction.Normalize ();
 //		rgb.velocity = direction * MoveSpeed;
-		rgb.AddForce(direction * MoveSpeed);
+		if (dist < StopRange)
+			return;
+		rgb.AddForce(direction * 20f);
 		if (rgb.velocity.magnitude >= MoveSpeed)
 			rgb.velocity = rgb.velocity.normalized * MoveSpeed;
+
+		if (dist < SlowRange)
+			rgb.velocity = rgb.velocity.normalized * 0.3f;
+		
 
 		float deg = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 		float delta = deg - (View.transform.eulerAngles.z);
@@ -52,8 +61,9 @@ public class MoveController : MonoBehaviour {
 
 			View.transform.Rotate (Vector3.forward * ParentCtrl.RotateSpeed * Time.deltaTime * delta);
 
-			ParentCtrl.AdaptFace (deg);
+
 		}
+		ParentCtrl.AdaptFace (deg);
 
 	}
 

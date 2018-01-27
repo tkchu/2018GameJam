@@ -6,7 +6,7 @@ public class CharacterController : MonoBehaviour {
 
 
 	public States State;
-	private MoveController Move; 
+	protected MoveController Move; 
 	[HideInInspector] public ViewArea View;
 	private Transform TargetTransform;
 	public AngryablePerson AngryPerson;
@@ -22,8 +22,9 @@ public class CharacterController : MonoBehaviour {
 
 	// rotate
 	public int SearchRotate;
+	private float SearchTarget;
 	public float RotateSpeed = 40f;
-	private Facing Face;
+	public Facing Face;
 
 
 	// Use this for initialization
@@ -38,6 +39,8 @@ public class CharacterController : MonoBehaviour {
 	public void Start()
 	{
 		AdaptFace (View.transform.eulerAngles.z);
+		if (GetComponent<PatrolMove> () == null)
+			Move.SetTarget (Origin);
 	}
 	public void test()
 	{
@@ -64,18 +67,21 @@ public class CharacterController : MonoBehaviour {
 		if (Wudi >= 0.1f)
 			Wudi -= Time.deltaTime;
 		
-		if (Stop > 0.1f) {
-			Stop -= Time.deltaTime;
-			if (Stop < 0.1f) {
-				Debug.Log ("Stop over");
-			}
-			return;
-		}
+//		if (Stop > 0.1f) {
+//			Stop -= Time.deltaTime;
+//			if (Stop < 0.1f) {
+//				Debug.Log ("Stop over");
+//			}
+//			return;
+//		}
 
 
 		// Search !
 		if (SearchRotate != 0) {
 			View.transform.Rotate (Vector3.forward * RotateSpeed * Time.deltaTime * SearchRotate);
+//			if (Mathf.Abs (View.transform.eulerAngles - SearchTarget) < 1f) {
+//				SearchRotate = 0;
+//			}
 			AdaptFace (View.transform.eulerAngles.z);
 
 		} 
@@ -145,6 +151,8 @@ public class CharacterController : MonoBehaviour {
 			else
 				SearchRotate = -1;
 
+			SearchTarget = deg;
+
 		}
 	}
 
@@ -161,6 +169,7 @@ public class CharacterController : MonoBehaviour {
 
 	public void AdaptFace(float deg)
 	{
+		
 
 		deg -= 90;
 		deg = -deg;
@@ -168,29 +177,32 @@ public class CharacterController : MonoBehaviour {
 			deg -= 360;
 		while (deg < 0)
 			deg += 360;
-		
+
+//		if (gameObject.name == "PoliceCharacter")
+//			Debug.Log (deg);
+
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (deg);
 		
 		if (deg <= 315 && deg >= 225) 
 		{
-			if(Face != null || Face != Facing.left)
-				AngryPerson.SetFacing (Facing.left);
+			AngryPerson.SetFacing (Facing.left);
+			Face = Facing.left;
 		} 
 		else if(deg <= 135 && deg >= 45)
 		{
-			if(Face != null || Face != Facing.right)
-				AngryPerson.SetFacing (Facing.right);
+			AngryPerson.SetFacing (Facing.right);
+			Face = Facing.right;
 		}
 		else if(deg <= 225 && deg >= 135)
 		{
-			if(Face != null || Face != Facing.down)
-				AngryPerson.SetFacing (Facing.down);
+			AngryPerson.SetFacing (Facing.down);
+			Face = Facing.down;
 		}
 		else 
 		{
-			if(Face != null || Face != Facing.up)
-				AngryPerson.SetFacing (Facing.up);
+			AngryPerson.SetFacing (Facing.up);
+			Face = Facing.up;
 		}
 	}
 }

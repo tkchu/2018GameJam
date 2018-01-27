@@ -64,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1897951412089248
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   SearchRotate: 0
   RotateSpeed: 40
+  Face: 0
 --- !u!114 &114392674398938640
 MonoBehaviour:
   m_ObjectHideFlags: 1

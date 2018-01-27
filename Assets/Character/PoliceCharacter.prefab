@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504476864426012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.016885, y: -3.1932716, z: 0}
+  m_LocalPosition: {x: 3.2, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4975496336599384}
@@ -211,7 +211,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -266,7 +266,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0.5}
-    oldSize: {x: 4.06, y: 3}
+    oldSize: {x: 6.09, y: 4.5}
     newSize: {x: 4.06, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -318,9 +318,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rgb: {fileID: 0}
-  MoveSpeed: 2
+  MoveSpeed: 1
   AtTarget: 0
   Point:
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &114195468879813260
 MonoBehaviour:
@@ -350,7 +351,8 @@ MonoBehaviour:
   hitCircle: {fileID: 114076912849907654}
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   SearchRotate: 0
-  RotateSpeed: 40
+  RotateSpeed: 120
+  Face: 0
 --- !u!114 &114605022110745558
 MonoBehaviour:
   m_ObjectHideFlags: 1
