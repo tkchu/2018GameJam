@@ -26,6 +26,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+    public GameObject result;
+    public void ShowOverResult() {
+        FindObjectOfType<PlayerControl>().enabled = false;
+        result.SetActive(true);
+    }
+
 	static public void GameWin()
 	{
 		Debug.Log ("Win");
@@ -33,6 +39,7 @@ public class GameController : MonoBehaviour {
 	static public void GameOver()
 	{
 		Debug.Log ("Game Over");
+        FindObjectOfType<GameController>().ShowOverResult();
 	}
 
 }
