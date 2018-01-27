@@ -30,6 +30,10 @@ public class CharacterController : MonoBehaviour {
 //		test();
 	}
 
+	void Start()
+	{
+		AdaptFace (View.transform.eulerAngles.z);
+	}
 	void test()
 	{
 		State = States.WillAngry;
@@ -44,8 +48,6 @@ public class CharacterController : MonoBehaviour {
 		Move = GetComponent<MoveController> ();
 		HitRange = GetComponent<CircleCollider2D> ().radius * 2 + 0.1f;
 		View = GetComponentInChildren<ViewArea> ();
-
-		AdaptFace (View.transform.eulerAngles.z);
 	}
 
 	void Update()
@@ -74,7 +76,12 @@ public class CharacterController : MonoBehaviour {
 			}
 		}
 
-
+		// Move
+		if (Move.target != null) 
+		{
+			AngryPerson.TriggerRun ();
+			Move.UpdateMove();
+		}
 
 
 	}
@@ -83,7 +90,6 @@ public class CharacterController : MonoBehaviour {
 	{
 //		Debug.Log ("BecomeAngry");
 		State = States.Angry;
-		AngryPerson.TriggerRun ();
 		SearchRotate = 0;
 		Move.SetTarget (target);
 		TargetCtrl = target.GetComponent<CharacterController> ();

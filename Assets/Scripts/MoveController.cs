@@ -9,24 +9,22 @@ public class MoveController : MonoBehaviour {
 	private ViewArea View;
 	[HideInInspector]
 	public Rigidbody2D rgb;
+
 	private float MoveSpeed = 1f;
 
 	public bool AtTarget;
 
-	void Start () {
+	public void Start () {
 		rgb = GetComponent<Rigidbody2D> ();
 		ParentCtrl = GetComponent<CharacterController> ();
 		View = ParentCtrl.View;
 	}
 
-	void LateUpdate () {
-
-//		if (target == null || AtTarget)
-//			return;
+	virtual public void UpdateMove () {
 
 		if (target == null)
 			return;
-		
+
 		Vector3 direction = target.transform.position - transform.position;
 		float dist = direction.magnitude;
 
@@ -73,5 +71,10 @@ public class MoveController : MonoBehaviour {
 	void OnTriggerExit(Collider other)
 	{
 		AtTarget = false;
+	}
+
+	public float GetDist()
+	{
+		return (transform.position - target.transform.position).magnitude;
 	}
 }

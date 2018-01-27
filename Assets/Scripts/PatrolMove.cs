@@ -2,14 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomMove : MoveController {
+public class PatrolMove : MoveController {
 
-	public GameObject PosA, PosB;
+	public GameObject[] Point;
+	private int Pos = 0;
 
-
-
-	void Update()
+	void Start()
 	{
-		base.SetTarget (PosA);
+		base.Start ();
+		base.target = Point[Pos];
+	}
+
+
+	override public void UpdateMove()
+	{
+		if (GetDist () <= 2f) 
+		{
+			Pos = (Pos + 1) % Point.Length;
+			base.SetTarget (Point[Pos]);	
+		}
+
+		base.UpdateMove ();
 	}
 }
