@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour {
                 break;
         }
     }
-
-    public void TurnLeft() {
-        SetFacing(Facing.left);
+    public void SetFacing(float right, float up) {
+        animator.SetFloat("MoveRight", right);
+        animator.SetFloat("MoveUp", up);
     }
 }
