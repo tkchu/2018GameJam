@@ -44,6 +44,9 @@ TagManager:
   - name: person
     uniqueID: 3078897103
     locked: 0
-  - name: facing
+  - name: face
     uniqueID: 3001465857
+    locked: 0
+  - name: icon
+    uniqueID: 1608074481
     locked: 0

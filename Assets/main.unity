@@ -190,8 +190,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 67343034}
-        m_MethodName: SetFacing
+      - m_Target: {fileID: 475525372}
+        m_MethodName: TriggerHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -335,6 +335,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475525372 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114868864807056032, guid: a1d047e4c24f1614aaab7b429922891f,
+    type: 2}
+  m_PrefabInternal: {fileID: 540535438}
+  m_Script: {fileID: 11500000, guid: 9975446c3fda99542bd96f7b8413290c, type: 3}
 --- !u!1 &538766337
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +514,10 @@ Prefab:
     - target: {fileID: 4708162205472472, guid: a1d047e4c24f1614aaab7b429922891f, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926816350959944, guid: a1d047e4c24f1614aaab7b429922891f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1d047e4c24f1614aaab7b429922891f, type: 2}

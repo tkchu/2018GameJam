@@ -13,6 +13,16 @@ public class AngryablePerson : MonoBehaviour {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    public GameObject hitIcon;
+    public void TriggerHit() {
+        StartCoroutine(ShowHit());
+    }
+    IEnumerator ShowHit() {
+        hitIcon.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        hitIcon.SetActive(false);
+    }
     public void TriggerNoAngry() {
         animator.SetTrigger("noAngryTrigger");
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     PlayerMovement playerMovement;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
     public HitCircle hitCircle;
     public bool isFighting = false;
     public float speed = 1f;
