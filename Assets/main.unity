@@ -253,17 +253,32 @@ GameObject:
   m_PrefabParentObject: {fileID: 1035069632400788, guid: 7d315a4fd3a22404cad12514b18fef11,
     type: 2}
   m_PrefabInternal: {fileID: 1683563851}
---- !u!114 &314961862
+--- !u!114 &314961862 stripped
 MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114655245736453090, guid: 7d315a4fd3a22404cad12514b18fef11,
+    type: 2}
+  m_PrefabInternal: {fileID: 1683563851}
+  m_Script: {fileID: 11500000, guid: ca3b5b6eb8188d3439e9a77dd773eaaa, type: 3}
+--- !u!50 &314961864
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 314961858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3b5b6eb8188d3439e9a77dd773eaaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &461289032
 GameObject:
   m_ObjectHideFlags: 0
