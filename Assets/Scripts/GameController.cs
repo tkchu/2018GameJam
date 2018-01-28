@@ -26,20 +26,24 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-    public GameObject result;
+    public GameObject overResult;
     public void ShowOverResult() {
         FindObjectOfType<PlayerControl>().enabled = false;
-        result.SetActive(true);
+        overResult.SetActive(true);
     }
 
-	static public void GameWin()
+    public GameObject winResult;
+    public void ShowWinResult() {
+        FindObjectOfType<PlayerControl>().enabled = false;
+        winResult.SetActive(true);
+    }
+    static public void GameWin()
 	{
-//		Debug.Log ("Win");
-	}
-	static public void GameOver()
+        FindObjectOfType<GameController>().ShowWinResult();
+    }
+    static public void GameOver()
 	{
-//		Debug.Log ("Game Over");
-        //FindObjectOfType<GameController>().ShowOverResult();
+        FindObjectOfType<GameController>().ShowOverResult();
 	}
 
 }
