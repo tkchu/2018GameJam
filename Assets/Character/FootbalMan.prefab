@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50091992853827454}
   - component: {fileID: 114055014286477164}
   - component: {fileID: 114920842674033646}
+  - component: {fileID: 114016891126440172}
   m_Layer: 8
   m_Name: FootbalMan
   m_TagString: Character
@@ -137,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069049721670086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7, y: -0.91, z: 0}
+  m_LocalPosition: {x: 7.61, y: -2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4292220088459924}
@@ -294,6 +295,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114016891126440172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069049721670086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98aa8b97e25e2d8428004ae9c0a03429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114055014286477164
 MonoBehaviour:
   m_ObjectHideFlags: 1

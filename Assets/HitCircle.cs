@@ -11,6 +11,7 @@ public class HitCircle : MonoBehaviour {
 		if (collision.GetComponentInChildren<PoliceView> () != null// is police
 		   && GetComponentInParent<FootballController> () == null)
 			return;
+		
         CharacterController c = collision.gameObject.GetComponent<CharacterController>();
         if (c != null) {
             c.Hit(transform.parent.transform.position);
