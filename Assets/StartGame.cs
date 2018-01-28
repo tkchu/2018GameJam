@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour {
     public void Click() {
-        SceneManager.LoadScene("level");
+        SceneManager.LoadScene("level0");
     }
 }
