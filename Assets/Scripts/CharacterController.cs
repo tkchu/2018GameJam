@@ -22,7 +22,7 @@ public class CharacterController : MonoBehaviour {
 
 	// rotate
 	public int SearchRotate;
-	private float TotalRotate;
+	public float TotalRotate;
 	public float RotateSpeed = 40f;
 	public Facing Face;
 
@@ -81,8 +81,13 @@ public class CharacterController : MonoBehaviour {
 
 			AdaptFace (View.transform.eulerAngles.z);
 
-			if (Mathf.Abs (TotalRotate) >= 360)
+			TotalRotate += RotateSpeed * Time.deltaTime * SearchRotate;
+
+			if (Mathf.Abs (TotalRotate) >= 360) {
 				SearchRotate = 0;
+				State = States.Normal;
+			}
+
 		} 
 
 		// Hit others
