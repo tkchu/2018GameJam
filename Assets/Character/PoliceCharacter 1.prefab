@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 60017361523492142}
   - component: {fileID: 114449643264693932}
   - component: {fileID: 212359694365115852}
+  - component: {fileID: 114051195288279930}
   m_Layer: 0
   m_Name: ViewArea
   m_TagString: ViewArea
@@ -294,6 +295,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114051195288279930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000767713673678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e293174864b08ee4689698ca860fe2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorIn: {r: 1, g: 0.44705883, b: 0.20392157, a: 1}
+  colorOut: {r: 0.37254903, g: 1, b: 0.43137255, a: 1}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &114057035221369192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -505,7 +520,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 020d6039a1b202d42af16fc639877119, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.37254903, g: 1, b: 0.43137258, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
