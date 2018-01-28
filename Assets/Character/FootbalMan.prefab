@@ -365,7 +365,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e086684a14dde465ba15606ab6130fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &114973510037221526
+=======
+  State: 0
+  View: {fileID: 114779320392743364}
+  AngryPerson: {fileID: 114369429230519812}
+  hitCircle: {fileID: 114545808798651890}
+  Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
+  SearchRotate: 0
+  RotateSpeed: 40
+--- !u!114 &114779320392743364
+>>>>>>> 6ca3e5b3c8e781833587ea0ff81708efe15832fc
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
