@@ -34,12 +34,12 @@ public class GameController : MonoBehaviour {
 
 	static public void GameWin()
 	{
-		Debug.Log ("Win");
+//		Debug.Log ("Win");
 	}
 	static public void GameOver()
 	{
-		Debug.Log ("Game Over");
-        FindObjectOfType<GameController>().ShowOverResult();
+//		Debug.Log ("Game Over");
+        //FindObjectOfType<GameController>().ShowOverResult();
 	}
 
 }

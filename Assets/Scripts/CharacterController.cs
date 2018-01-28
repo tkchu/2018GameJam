@@ -26,14 +26,12 @@ public class CharacterController : MonoBehaviour {
 	public float RotateSpeed = 40f;
 	public Facing Face;
 
+	private float RandomRange = 10f;
 
 	// Use this for initialization
 	public void Awake () 
 	{
 		Init ();
-
-
-//		test();
 	}
 
 	public void Start()
@@ -41,11 +39,6 @@ public class CharacterController : MonoBehaviour {
 		AdaptFace (View.transform.eulerAngles.z);
 		if (GetComponent<PatrolMove> () == null)
 			Move.SetTarget (Origin);
-	}
-	public void test()
-	{
-		State = States.WillAngry;
-		SearchRotate = 1;
 	}
 
 	public void Init()
@@ -63,6 +56,13 @@ public class CharacterController : MonoBehaviour {
 	{
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (View.transform.eulerAngles.z);
+		if (GetComponentInChildren<PoliceView> () == null && State == States.Normal) {
+			GameObject temp = Instantiate (Origin);
+			temp.transform.position += new Vector3((Random.value - 0.5f) * RandomRange, (Random.value - 0.5f) * RandomRange, 0f);
+			Move.SetTarget (temp);
+		}
+			
+
 		if (Wudi >= 0.1f)
 			Wudi -= Time.deltaTime;
 		
