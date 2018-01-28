@@ -22,4 +22,20 @@ public class TestButton : MonoBehaviour {
             fac = 0;
         }
     }
+    public void SetAngry(bool angry) {
+        if (angry) {
+            person.TriggerAngry();
+        }else {
+            person.TriggerNoAngry();
+        }
+    }
+    public void SetRun() {
+        person.TriggerRun();
+    }
+    public void SetFight() {
+        person.TriggerFight();
+    }
+    public void SetWhistle() {
+        person.TriggerWhistle();
+    }
 }
