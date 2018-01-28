@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1819735305280204
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069049721670086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.61, y: -1.5, z: 0}
+  m_LocalPosition: {x: -7.47, y: 3.18, z: 0.01318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4292220088459924}
@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 1692043352458482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 4152346355441674}
   m_RootOrder: 2
@@ -433,7 +433,7 @@ MonoBehaviour:
   View: {fileID: 114325779215752248}
   AngryPerson: {fileID: 114617028088640996}
   hitCircle: {fileID: 114445596078888430}
-  Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
+  Origin: {fileID: 0}
   Wudi: 0
   SearchRotate: 0
   RotateSpeed: 120
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_SortingLayerID: -1216070193
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e56616a5c01cfee41a8942be67ce84d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1aa319317503e44d95a5fff07efb441, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -591,7 +591,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1532415224649448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -619,7 +619,7 @@ SpriteRenderer:
   m_SortingLayerID: -1293501439
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0bf299099b2997b448ddc1935cbe1f5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc3a85880eaf155429fab8f28f1ba4a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -679,7 +679,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220362671770984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

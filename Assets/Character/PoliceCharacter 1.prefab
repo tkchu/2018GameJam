@@ -244,7 +244,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792515170746496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -331,6 +331,8 @@ MonoBehaviour:
   Point:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114092894585414840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,6 +360,7 @@ MonoBehaviour:
   AngryPerson: {fileID: 114531622357355468}
   hitCircle: {fileID: 114092894585414840}
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
+  Wudi: 0
   SearchRotate: 0
   RotateSpeed: 120
   Face: 0
