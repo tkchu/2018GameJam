@@ -244,7 +244,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792515170746496}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -252,7 +252,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!60 &60017361523492142
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -362,6 +362,7 @@ MonoBehaviour:
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   Wudi: 0
   SearchRotate: 0
+  TotalRotate: 0
   RotateSpeed: 120
   Face: 0
 --- !u!114 &114424631699418678

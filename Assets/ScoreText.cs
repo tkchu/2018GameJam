@@ -12,6 +12,6 @@ public class ScoreText : MonoBehaviour {
     }
 
     public void Update() {
-        text.text = "剩余：" + (gc.Enemies.Length - gc.Score).ToString() ;
+        text.text = (gc.Enemies.Length - gc.Score).ToString() ;
     }
 }
