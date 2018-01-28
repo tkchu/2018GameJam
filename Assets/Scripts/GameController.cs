@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	private GameObject[] Enemies;
+	public GameObject[] Enemies;
 	public int Score;
 	void Start () {
 		Enemies = GameObject.FindGameObjectsWithTag ("Character");
