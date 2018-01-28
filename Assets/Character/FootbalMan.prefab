@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 0
   View: {fileID: 114779320392743364}
-  AngryPerson: {fileID: 0}
+  AngryPerson: {fileID: 114369429230519812}
   hitCircle: {fileID: 114545808798651890}
   Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   SearchRotate: 0

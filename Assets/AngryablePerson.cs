@@ -29,6 +29,14 @@ public class AngryablePerson : MonoBehaviour {
     }
     public void TriggerAngry() {
         angryableFace.SetAngry(true);
+        if (gameObject.name == "normalPerson"
+            &&
+            (animator.GetCurrentAnimatorStateInfo(0).IsName("normal-front-fight")
+            || animator.GetCurrentAnimatorStateInfo(0).IsName("normal-back-fight")
+            || animator.GetCurrentAnimatorStateInfo(0).IsName("normal-side-fight")
+            )) {
+            angryableFace.SetAngry(false);
+        }
     }
     public void TriggerRun() {
         animator.SetTrigger("runTrigger");
@@ -36,6 +44,9 @@ public class AngryablePerson : MonoBehaviour {
     }
     public void TriggerFight() {
         animator.SetTrigger("fightTrigger");
+        if(gameObject.name == "normalPerson") {
+            angryableFace.SetAngry(false);
+        }
     }
     public void TriggerWhistle() {
         animator.SetTrigger("whistleTrigger");
