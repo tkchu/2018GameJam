@@ -22,7 +22,7 @@ public class CharacterController : MonoBehaviour {
 
 	// rotate
 	public int SearchRotate;
-	private float SearchTarget;
+	private float TotalRotate;
 	public float RotateSpeed = 40f;
 	public Facing Face;
 
@@ -81,6 +81,8 @@ public class CharacterController : MonoBehaviour {
 
 			AdaptFace (View.transform.eulerAngles.z);
 
+			if (Mathf.Abs (TotalRotate) >= 360)
+				SearchRotate = 0;
 		} 
 
 		// Hit others
@@ -129,7 +131,7 @@ public class CharacterController : MonoBehaviour {
 		{
 			AngryPerson.TriggerHit ();
 			State = States.WillAngry;
-
+			TotalRotate = 0;
 
 			Vector3 direction = otherVec - transform.position;
 			float deg = Mathf.Rad2Deg * Mathf.Atan2 (direction.y, direction.x); 
@@ -148,8 +150,6 @@ public class CharacterController : MonoBehaviour {
 				SearchRotate = 1;
 			else
 				SearchRotate = -1;
-
-			SearchTarget = deg;
 
 		}
 	}
