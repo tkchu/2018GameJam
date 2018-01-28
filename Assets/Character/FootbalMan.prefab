@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1819735305280204
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069049721670086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.47, y: 3.18, z: 0.01318}
+  m_LocalPosition: {x: -8.13, y: -4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4292220088459924}
@@ -433,7 +433,7 @@ MonoBehaviour:
   View: {fileID: 114325779215752248}
   AngryPerson: {fileID: 114617028088640996}
   hitCircle: {fileID: 114445596078888430}
-  Origin: {fileID: 0}
+  Origin: {fileID: 1861950095321222, guid: 7afcc8f5e6e6c4db49daf67209ea5a97, type: 2}
   Wudi: 0
   SearchRotate: 0
   RotateSpeed: 120
