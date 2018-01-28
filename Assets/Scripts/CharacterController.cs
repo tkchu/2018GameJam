@@ -17,7 +17,7 @@ public class CharacterController : MonoBehaviour {
 
 	// hit
 	private float HitRange;
-	private float Wudi;
+	public float Wudi;
 	private float Stop=0;
 
 	// rotate
@@ -78,9 +78,7 @@ public class CharacterController : MonoBehaviour {
 		// Search !
 		if (SearchRotate != 0) {
 			View.transform.Rotate (Vector3.forward * RotateSpeed * Time.deltaTime * SearchRotate);
-//			if (Mathf.Abs (View.transform.eulerAngles - SearchTarget) < 1f) {
-//				SearchRotate = 0;
-//			}
+
 			AdaptFace (View.transform.eulerAngles.z);
 
 		} 
@@ -129,6 +127,7 @@ public class CharacterController : MonoBehaviour {
 
 		if(State == States.Normal && Wudi < 0.1f) // some condition
 		{
+			AngryPerson.TriggerHit ();
 			State = States.WillAngry;
 
 
@@ -162,7 +161,7 @@ public class CharacterController : MonoBehaviour {
 		State = States.Normal;
 		hitCircle.gameObject.SetActive(false);
 		Move.SetTarget (Origin);
-		Wudi = 1f;
+		Wudi = 0.5f;
 	}
 		
 

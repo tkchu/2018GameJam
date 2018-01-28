@@ -20,7 +20,7 @@ public class AngryablePerson : MonoBehaviour {
     }
     IEnumerator ShowHit() {
         hitIcon.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         hitIcon.SetActive(false);
     }
     public void TriggerNoAngry() {

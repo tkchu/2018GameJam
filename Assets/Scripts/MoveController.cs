@@ -53,15 +53,15 @@ public class MoveController : MonoBehaviour {
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (deg.ToString() + "," + (View.transform.eulerAngles.z).ToString() + "," + delta.ToString() );
 		
-		if (Mathf.Abs (delta) > 10f) 
+		if (Mathf.Abs (delta) > 10f && ParentCtrl.SearchRotate == 0) 
 		{
 			delta /= Mathf.Abs(delta);
 
 			View.transform.Rotate (Vector3.forward * ParentCtrl.RotateSpeed * Time.deltaTime * delta);
 
-
+			ParentCtrl.AdaptFace (deg);
 		}
-		ParentCtrl.AdaptFace (deg);
+			
 
 	}
 

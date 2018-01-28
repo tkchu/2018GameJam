@@ -20,7 +20,7 @@ public class Smoke : MonoBehaviour {
             || info.IsName("football-side-fight");
         int facing = parentAnimator.GetInteger("facing");
         spriteRenderer.flipX = facing == 3;
-        spriteRenderer.flipY = facing == 0;
+        spriteRenderer.flipY = facing == 1;
         animator.SetInteger("facing", facing);
         animator.SetBool("fight", isFighting);
     }

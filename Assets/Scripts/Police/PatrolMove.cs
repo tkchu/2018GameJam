@@ -18,11 +18,11 @@ public class PatrolMove : MoveController {
 
 	override public void UpdateMove()
 	{
+		
 		if (Patrol && Point[Pos] != base.target) 
 		{
 			Patrol = false;
 		}
-
 		if (Patrol && GetDist () <= 0.5f) 
 		{
 			Pos = (Pos + 1) % Point.Length;
