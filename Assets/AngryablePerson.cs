@@ -39,6 +39,14 @@ public class AngryablePerson : MonoBehaviour {
     }
     public void TriggerWhistle() {
         animator.SetTrigger("whistleTrigger");
+        StartCoroutine(HideFaceWhileWhistle());
+    }
+    IEnumerator HideFaceWhileWhistle() {
+        bool angry = angryableFace.angry;
+        angryableFace.SetAngry(false);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsName("whistle"));
+        angryableFace.SetAngry(angry);
     }
     public void SetFacing(Facing facing) {
         switch (facing) {

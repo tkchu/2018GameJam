@@ -12,7 +12,9 @@ public class AngryableFace : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
     }
-
+    public bool angry {
+        get { return spriteRenderer.enabled; }
+    }
     public void SetAngry(bool angry) {
         spriteRenderer.enabled = angry;
     }
