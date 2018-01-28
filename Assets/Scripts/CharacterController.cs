@@ -56,11 +56,11 @@ public class CharacterController : MonoBehaviour {
 	{
 //		if (this.gameObject.name == "Character")
 //			Debug.Log (View.transform.eulerAngles.z);
-		if (GetComponentInChildren<PoliceView> () == null && State == States.Normal) {
-			GameObject temp = Instantiate (Origin);
-			temp.transform.position += new Vector3((Random.value - 0.5f) * RandomRange, (Random.value - 0.5f) * RandomRange, 0f);
-			Move.SetTarget (temp);
-		}
+//		if (GetComponentInChildren<PoliceView> () == null && State == States.Normal) {
+//			GameObject temp = Instantiate (Origin);
+//			temp.transform.position += new Vector3((Random.value - 0.5f) * RandomRange, (Random.value - 0.5f) * RandomRange, 0f);
+//			Move.SetTarget (temp);
+//		}
 			
 
 		if (Wudi >= 0.1f)
