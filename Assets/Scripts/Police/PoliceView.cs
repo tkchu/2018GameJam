@@ -14,7 +14,7 @@ public class PoliceView : ViewArea {
 
 		if (other.tag == "Character" && 
 			(other.GetComponent<CharacterController> ().State == States.Fight || other.GetComponent<CharacterController> ().State == States.Angry)
-			&& character.State == States.Normal) 
+			&& character.State == States.Normal && other.GetComponentInChildren<PoliceView> == null) 
 		{
 			character.SetStop (2);
 			character.AngryPerson.TriggerWhistle ();
